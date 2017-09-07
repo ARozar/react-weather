@@ -32,19 +32,19 @@ This does not create a production build of the app so there are no build optimiz
 
 Ideally a suite of tests would also run as part of the build process, potentially with project specific linting.
 
-###Test
+### Test
 Generally would look to test:
 
 - reducers
 - Test components using Enzyme (only 1 basic test so far) using shallow rendering for isolation
 - Potentially do full integration tests instead of shallow renders
 
-###Secrets /  config
+### Secrets /  config
 Would remove api key from source and use webpack to inject environment variables.
 
 Obtaining this info from the server could be another alternative.
 
-###Front end improvements
+### Front end improvements
 * Make List and detail components equal height
 * Look at using service worker if available to lower the number of api calls (currently using local storage)
 * Configure a sass loader, even if css is being handled on a component level many libraries require sass files to be imported
