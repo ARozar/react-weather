@@ -6,7 +6,7 @@
 * served up using webpack (via create react app)
 * deployed at https://wipro-react-app-redux-hftdeqortm.now.sh/
 
-##Deployment
+## Deployment
 
 The app was deployed using Ziet.  This deployment process simulates a deployment server as it takes the app contents runs both the npm install and start scripts.
 
