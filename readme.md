@@ -8,8 +8,6 @@
 
 ##Deployment
 
-The app is deployed at 
-
 The app was deployed using Ziet.  This deployment process simulates a deployment server as it takes the app contents runs both the npm install and start scripts.
 
 ## How do I get set up? ###
