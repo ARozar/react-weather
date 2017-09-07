@@ -43,7 +43,7 @@ export class FiveDayForecastPage extends React.Component {
     const { selectDay } = this.props.actions;
 
     const mainSection = (loading || error)
-      ? <h1>loading...</h1>
+      ? (!error)?<h1>loading...</h1>:<h1>Error</h1>
       : (
         <div className={classes.root}>
           <Grid container spacing={24}>

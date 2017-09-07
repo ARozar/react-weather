@@ -7,6 +7,7 @@ function setup(loading = true) {
   
   const props = {
     loading: loading,
+    error:false,
     title: 'Glasgow',
     days: [[],[],[],[],[]],
     actions:{
