@@ -1,24 +1,6 @@
 import Moment from 'moment';
 
-const FORECAST_KEY = 'Forecast';
-
-const retryPeriod = 10;//based on recommendation on https://openweathermap.org/appid
-
-const updateStorage = (forecast) =>{
-    localStorage.setItem(FORECAST_KEY, JSON.stringify(forecast));
-    return forecast;
-};
-
-
-const getForeCast = (key) =>{ 
-    return JSON.parse(localStorage.getItem(key));
-};
-
-const isNotExpired = (forecast) => {
-    const dateSet = Moment.utc(forecast.lastUpdated);
-    
-    return dateSet.add(retryPeriod,'minute').isAfter(Moment.utc());
-};
+import { updateStorage, getForeCast, isNotExpired, FORECAST_KEY } from './forecastStorage';
 
 export async function getFiveDayForecast() {
     const currentForecast = getForeCast(FORECAST_KEY);

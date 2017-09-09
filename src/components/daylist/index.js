@@ -16,7 +16,6 @@ const DayList = ({ days, title, selectDay, loading }) => {
         const dayAsString = (daysHasData) ? day[0].dayInMonth : '';
   
         const imgFromMiddleOfDay = (daysHasData) ? day[Math.floor(day.length / 2)].icon : '';
-        //return (<Day key={index} day={day}/>); 
         return (
           <ListItem key={index} button onClick={() =>selectDay(day[0].dayInMonth)}>
             <Avatar alt={dayAsString} src={imgFromMiddleOfDay} />

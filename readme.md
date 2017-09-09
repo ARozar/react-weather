@@ -6,7 +6,7 @@
 * served up using webpack (via create react app)
 * deployed at https://wipro-react-app-redux-hftdeqortm.now.sh/
 
-##Deployment
+## Deployment
 
 The app is deployed at 
 
@@ -34,19 +34,21 @@ This does not create a production build of the app so there are no build optimiz
 
 Ideally a suite of tests would also run as part of the build process.
 
-###Test
-Generally would look to test:
+### Testing
+Tested using Jest:
 
-- reducers
-- Test components using Enzyme (only 1 basic test so far) using shallow rendering for isolation
-- Potentially do full integration tests instead of shallow renders
+- all reducers
+- Components using Enzyme using shallow rendering for isolation if possible
+- Use of Material UI dependency means mounting full component tree is required.
+- Have one snapshot test for main containter.  Might do more on a full scale app, have not done this on presentational components.
+- Would consider Using Nock to test Http interaction on a full scale application.
 
-###Secrets /  config
+### Secrets /  config
 Would remove api key from source and use webpack to inject environment variables.
 
 Obtaining this info from the server could be another alternative.
 
-###Front end improvements
+### Front end improvements
 * Make List and detail components equal height
 * Look at using service worker if available to lower the number of api calls (currently using local storage)
 * Configure a sass loader, even if css is being handled on a component level many libraries require sass files to be imported
@@ -55,3 +57,4 @@ Obtaining this info from the server could be another alternative.
 * Externalize styles into seperate files.  Am using the withStyles high order component to scope styles to the relevant components but would move style objects to a seperate file in the same folder.
 * Would look to seperate out any complicated mapping functions into their own modules.
 * Would look at handling api errors with more granularity
+* Would have externalized api URL

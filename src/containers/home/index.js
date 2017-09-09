@@ -9,7 +9,7 @@ import Day from '../../components/daydetail';
 import DayList from '../../components/daylist';
 import * as fiveDayForecast from '../../actions/fivedayforecast';
 
-const styles = theme => ({
+export const styles = { 
   root: {
     flexGrow: 1,
     margin: 30
@@ -18,7 +18,7 @@ const styles = theme => ({
     padding: 16,
     textAlign: 'center'
   },
-});
+};
 
 export class FiveDayForecastPage extends React.Component {
 
