@@ -8,9 +8,7 @@
 
 ## Deployment
 
-The app is deployed at 
-
-The app was deployed using Ziet.  This deployment process simulates a deployment server as it takes the app contents runs both the npm install and start scripts.
+The app was deployed using Ziet.  This deployment process simulates a deployment server as it takes the app contents and runs both the npm install and start scripts.
 
 ## How do I get set up? ###
 
@@ -30,9 +28,9 @@ There run tests (of which there are one) run
 ## Next steps (with more time) ###
 
 ### Deployment
-This does not create a production build of the app so there are no build optimizations.  This is on area that could be improved.
+This does not create a production build of the app so there are no build optimizations.  This is one area that could be improved.
 
-Ideally a suite of tests would also run as part of the build process.
+Ideally a suite of tests would also run as part of the build process, potentially with project specific linting.
 
 ### Testing
 Tested using Jest:
@@ -58,3 +56,4 @@ Obtaining this info from the server could be another alternative.
 * Would look to seperate out any complicated mapping functions into their own modules.
 * Would look at handling api errors with more granularity
 * Would have externalized api URL
+
